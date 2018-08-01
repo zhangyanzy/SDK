@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/login_out_title"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="注销"
+            android:textColor="#181818"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/login_out_account"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="您确定要切换账号吗?"
+            android:textColor="#181818"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#d1d1d1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/login_out_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/trw_exit_left_btn"
+                android:text="取消"
+                android:textColor="#1E90FF" />
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#d1d1d1"
+                />
+            <Button
+                android:id="@+id/login_out_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="确定"
+                android:textColor="#1E90FF"
+                android:background="@drawable/trw_exit_right_btn"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

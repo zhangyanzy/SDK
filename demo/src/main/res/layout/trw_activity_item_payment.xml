@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ededed">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="支付"
+        android:textColor="#111"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/back_press"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/trw_close"/>
+
+    <TextView
+        android:id="@+id/tv_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="游戏账号:"
+        android:textColor="#111"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/account"
+        android:layout_below="@+id/title"
+        android:layout_toRightOf="@id/tv_account"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#111"
+        tools:text="654654654"
+        />
+
+    <TextView
+        android:id="@+id/tv_indent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_account"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="订单金额:"
+        android:textColor="#111"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/rmb_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_indent"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/tv_indent"
+        android:text="￥"
+        android:textColor="#111"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/indent_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_indent"
+        android:layout_toRightOf="@id/rmb_icon"
+        android:textColor="#e11f1f"
+        android:textSize="16sp"
+        tools:text="6.00"/>
+
+    <TextView
+        android:id="@+id/tv_good"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_indent"
+        android:layout_below="@+id/tv_indent"
+        android:layout_marginTop="16dp"
+        android:text="商品:"
+        android:textColor="#111"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/good_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_good"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/tv_good"
+        android:textColor="#e11f1f"
+        android:textSize="16sp"
+        tools:text="首充礼包"
+        />
+
+    <TextView
+        android:id="@+id/choose_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_good"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="请选择支付方式:"
+        android:textColor="#111"
+        android:textSize="16sp"/>
+
+    <RadioGroup
+        android:id="@+id/rg_choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choose_payment"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/alipay"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@drawable/trw_alipay_s"
+            android:button="@null"
+            android:tag="0"/>
+
+        <RadioButton
+            android:id="@+id/wechatpay"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/trw_wechat_s"
+            android:button="@null"
+            android:tag="1"
+            />
+
+        <RadioButton
+            android:id="@+id/trcoinpay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/trw_trcion_s"
+            android:button="@null"
+            android:tag="2"
+            android:visibility="gone"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/pay_now"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/rg_choose"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/trw_pay_bg"
+        android:textColor="#fff"
+        android:text="立即支付"
+        android:textSize="16sp"/>
+
+</RelativeLayout>
